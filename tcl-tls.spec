@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/tls/tls%{version}-src.tar.gz
 # Source0-md5:	358bc16e8fd5a335dbf2e855426885d2
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://tls.sourceforge.net/
-BuildRequires:	openssl-devel >= 0.9.7c
+BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	tcl-devel >= 8.4.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
