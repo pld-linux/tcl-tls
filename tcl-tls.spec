@@ -1,12 +1,12 @@
 Summary:	OpenSSL Tcl extension
 Summary(pl):	Rozszerzenie OpenSSL dla Tcl
 Name:		tcl-tls
-Version:	1.4.1
-Release:	3
+Version:	1.5.0
+Release:	1
 License:	distributable
 Group:		Development/Languages/Tcl
 Source0:	http://dl.sourceforge.net/tls/tls%{version}-src.tar.gz
-# Source0-md5:	358bc16e8fd5a335dbf2e855426885d2
+# Source0-md5:	9eeab472475773b3810acc808ebec759
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://tls.sourceforge.net/
 BuildRequires:	openssl-devel >= 0.9.7d
@@ -24,7 +24,7 @@ po³±czenia w oparciu o mechanizm gniazd Tcl. W kilku liniach kodu
 mo¿na zmie¶ciæ zapytanie serwera HTTPS.
 
 %prep
-%setup -qn tls1.4
+%setup -qn tls1.5
 %patch0 -p1
 
 %build
