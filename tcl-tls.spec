@@ -16,12 +16,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 TLS is an OpenSSL / RSA-bsafe Tcl extension that provides secure
 connections on top of the Tcl socket mechanism. Within a few lines of
-code, users can query https servers.
+code, users can query HTTPS servers.
 
 %description -l pl
 TLS to rozszerzenie Tcl OpenSSL / RSA-bsafe, udostêpniaj±ce bezpieczne
 po³±czenia w oparciu o mechanizm gniazd Tcl. W kilku liniach kodu
-mo¿na zmie¶ciæ zapytanie serwera https.
+mo¿na zmie¶ciæ zapytanie serwera HTTPS.
 
 %prep
 %setup -qn tls1.4
