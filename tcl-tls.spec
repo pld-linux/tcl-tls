@@ -5,7 +5,7 @@ Version:	1.4.1
 Release:	1
 License:	distributable
 Group:		Development/Languages/Tcl
-Source0:	http://prdownloads.sourceforge.net/tls/tls%{version}-src.tar.gz
+Source0:	http://dl.sourceforge.net/tls/tls%{version}-src.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://tls.sourceforge.net/
 BuildRequires:	openssl-devel >= 0.9.7
