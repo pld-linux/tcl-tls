@@ -8,14 +8,19 @@ Group:		Development/Languages/Tcl
 Source0:	http://prdownloads.sourceforge.net/tls/tls%{version}-src.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://tls.sourceforge.net/
-BuildRequires:	tcl-devel
 BuildRequires:	openssl-devel
+BuildRequires:	tcl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-TLS is an OpenSSL / RSA-bsafe Tcl extension that provides secure connections on
-top of the Tcl socket mechanism. Within a few lines of code, users can query
-https servers.
+TLS is an OpenSSL / RSA-bsafe Tcl extension that provides secure
+connections on top of the Tcl socket mechanism. Within a few lines of
+code, users can query https servers.
+
+%description -l pl
+TLS to rozszerzenie Tcl OpenSSL / RSA-bsafe, udostêpniaj±ce bezpieczne
+po³±czenia w oparciu o mechanizm gniazd Tcl. W kilku liniach kodu
+mo¿na zmie¶ciæ zapytanie serwera https.
 
 %prep
 %setup -qn tls1.4
@@ -30,9 +35,10 @@ https servers.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR="$RPM_BUILD_ROOT"
-rm -f $RPM_BUILD_ROOT%{_includedir}/*
+%{__make} install \
+	DESTDIR="$RPM_BUILD_ROOT"
 
+rm -f $RPM_BUILD_ROOT%{_includedir}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
