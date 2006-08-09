@@ -2,7 +2,7 @@ Summary:	OpenSSL Tcl extension
 Summary(pl):	Rozszerzenie OpenSSL dla Tcl
 Name:		tcl-tls
 Version:	1.5.0
-Release:	1
+Release:	2
 License:	distributable
 Group:		Development/Languages/Tcl
 Source0:	http://dl.sourceforge.net/tls/tls%{version}-src.tar.gz
