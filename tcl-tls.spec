@@ -1,5 +1,5 @@
 Summary:	OpenSSL Tcl extension
-Summary(pl):	Rozszerzenie OpenSSL dla Tcl
+Summary(pl.UTF-8):   Rozszerzenie OpenSSL dla Tcl
 Name:		tcl-tls
 Version:	1.5.0
 Release:	3
@@ -18,10 +18,10 @@ TLS is an OpenSSL / RSA-bsafe Tcl extension that provides secure
 connections on top of the Tcl socket mechanism. Within a few lines of
 code, users can query HTTPS servers.
 
-%description -l pl
-TLS to rozszerzenie Tcl OpenSSL / RSA-bsafe, udostêpniaj±ce bezpieczne
-po³±czenia w oparciu o mechanizm gniazd Tcl. W kilku liniach kodu
-mo¿na zmie¶ciæ zapytanie serwera HTTPS.
+%description -l pl.UTF-8
+TLS to rozszerzenie Tcl OpenSSL / RSA-bsafe, udostÄ™pniajÄ…ce bezpieczne
+poÅ‚Ä…czenia w oparciu o mechanizm gniazd Tcl. W kilku liniach kodu
+moÅ¼na zmieÅ›ciÄ‡ zapytanie serwera HTTPS.
 
 %prep
 %setup -qn tls1.5
