@@ -35,28 +35,28 @@ diff -urNad tcltls-1.5.0~/tls.c tcltls-1.5.0/tls.c
   *-------------------------------------------------------------------
   */
  static int
-@@ -1166,8 +1173,22 @@
+@@ -1231,8 +1231,22 @@
      int objc;
      Tcl_Obj	*CONST objv[];
  {
--    const char *commands [] = { "req", NULL };
+-    CONST84 char *commands [] = { "req", NULL };
 -    enum command { C_REQ, C_DUMMY };
-+    const char *commands [] = { "req", 
-+#if OPENSSL_VERSION_NUMBER >= 0x0090800L		
-+		"config", 
-+#ifndef OPENSSL_NO_ENGINE		
-+		"engine", 
-+#endif		
-+#endif		
-+		NULL };
-+    enum command { C_REQ, 
-+#if OPENSSL_VERSION_NUMBER >= 0x0090800L		
-+		C_CONFIG,
-+#ifndef OPENSSL_NO_ENGINE		
-+		C_ENGINE, 
-+#endif		
-+#endif		
-+		C_DUMMY };
++    CONST84 char *commands [] = { "req", 
++#if OPENSSL_VERSION_NUMBER >= 0x0090800L
++	    "config",
++#ifndef OPENSSL_NO_ENGINE
++	    "engine",
++#endif
++#endif
++	    NULL };
++    enum command { C_REQ,
++#if OPENSSL_VERSION_NUMBER >= 0x0090800L
++	    C_CONFIG,
++#ifndef OPENSSL_NO_ENGINE
++	    C_ENGINE,
++#endif
++#endif
++	    C_DUMMY };
      int cmd;
  
      if (objc < 2) {
