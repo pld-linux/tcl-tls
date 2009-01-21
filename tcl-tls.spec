@@ -1,15 +1,13 @@
 Summary:	OpenSSL Tcl extension
 Summary(pl.UTF-8):	Rozszerzenie OpenSSL dla Tcl
 Name:		tcl-tls
-Version:	1.5.0
-Release:	4
+Version:	1.6
+Release:	1
 License:	distributable
 Group:		Development/Languages/Tcl
 Source0:	http://dl.sourceforge.net/tls/tls%{version}-src.tar.gz
-# Source0-md5:	9eeab472475773b3810acc808ebec759
-Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-load-ssl-config.patch
-Patch2:		%{name}-pkgIndex.patch
+# Source0-md5:	eb326ff9e6fc3b9885aa5c72fb8df3bf
+Patch0:		%{name}-load-ssl-config.patch
 URL:		http://tls.sourceforge.net/
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	tcl-devel >= 8.4.3
@@ -26,13 +24,11 @@ połączenia w oparciu o mechanizm gniazd Tcl. W kilku liniach kodu
 można zmieścić zapytanie serwera HTTPS.
 
 %prep
-%setup -qn tls1.5
+%setup -qn tls%{version}
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
-%configure2_13 \
+%configure \
 	--with-ssl-dir=/usr
 %{__make}
 
@@ -51,5 +47,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README.txt license.terms
-%{_libdir}/lib*.so
-%{_libdir}/tls*
+%dir %{_libdir}/tls%{version}
+%attr(755,root,root) %{_libdir}/tls%{version}/lib*.so
+%{_libdir}/tls%{version}/*.tcl
