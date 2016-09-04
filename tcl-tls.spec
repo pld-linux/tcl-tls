@@ -5,7 +5,7 @@ Version:	1.6.7
 Release:	1
 License:	distributable
 Group:		Development/Languages/Tcl
-Source0:	http://dl.sourceforge.net/tls/tls%{version}-src.tar.gz
+Source0:	http://downloads.sourceforge.net/tls/tls%{version}-src.tar.gz
 # Source0-md5:	2765d84a7a520c9979d82a0abebc1647
 URL:		http://tls.sourceforge.net/
 BuildRequires:	openssl-devel >= 0.9.7d
